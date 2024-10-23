@@ -26,8 +26,8 @@ pipeline {
       }
     } */
 
-    post {
-      always {
+  post {
+    always {
         echo 'pipeline finished'
       }
     }
