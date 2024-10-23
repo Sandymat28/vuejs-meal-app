@@ -31,3 +31,5 @@ pipeline {
         echo 'pipeline finished'
       }
     }
+  }
+}
