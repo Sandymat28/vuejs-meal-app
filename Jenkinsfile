@@ -14,7 +14,8 @@ pipeline {
     stage ('test') {
       steps {
         echo 'Testing the application'
-        sh 'npm test'
+        sh './jenkins/scripts/test.sh'
+       //sh 'npm test'
       }
     }
 
