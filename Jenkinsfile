@@ -25,10 +25,11 @@ pipeline {
 
       }
     } */
+  }
+  
   post {
     always {
         echo 'pipeline finished'
       }
     }
   }
-}
