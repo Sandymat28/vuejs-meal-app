@@ -6,6 +6,7 @@ pipeline {
   
   environment {
     DOCKERHUB_CREDENTIALS = credentials('DOCKER_ACCOUNT')
+  }
     
   stages {
     stage ('Install dependancies') {
@@ -40,7 +41,9 @@ pipeline {
         steps {
           echo 'Pushing to Dockerhub'
           sh 'docker push matsandy/mealsapp:latest'
-  }
+        }
+      }
+    }
   
   post {
     always {
@@ -50,3 +53,4 @@ pipeline {
       }
     }
   }
+  
