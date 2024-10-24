@@ -26,7 +26,8 @@ pipeline {
     stage ('build') {
       steps {
         echo 'Building docker image'
-        sh 'docker build -t matsandy/mealsapp:latest .'
+        sh 'docker build -t matsandy/projetvue:latest .'
+        sh 'docker-compose up -d'
       }
     }
 
@@ -40,16 +41,16 @@ pipeline {
       stage('Push') {
         steps {
           echo 'Pushing to Dockerhub'
-          sh 'docker push matsandy/mealsapp:latest'
+          sh 'docker push matsandy/projetvue:latest'
         }
       }
 
-      stage ('Run') {
+     /* stage ('Run') {
         steps {
           echo 'Running application'
           sh 'docker run -p 3000:3000 -d matsandy/mealsapp:latest'
         }
-      }
+      }*/
     }
   
   post {
