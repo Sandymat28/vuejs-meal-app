@@ -8,7 +8,6 @@
     "build": "vite build",
     "test": "echo \"No tests defined\" && exit 0",
     "serve": "vue-cli-service serve", 
-    "_comment":"ajout de ce scripts la ligne au dessus pour le jenkinsfile"
     "preview": "vite preview"
   },
   "dependencies": {
