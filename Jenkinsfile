@@ -43,6 +43,10 @@ pipeline {
           sh 'docker push matsandy/mealsapp:latest'
         }
       }
+
+      stage ('Run') {
+        steps {
+          sh 'docker run -d
     }
   
   post {
