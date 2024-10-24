@@ -46,7 +46,10 @@ pipeline {
 
       stage ('Run') {
         steps {
-          sh 'docker run -d
+          echo 'Running application'
+          sh 'docker run -p 3000:3000 -d mealsapp:latest'
+        }
+      }
     }
   
   post {
