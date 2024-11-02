@@ -52,7 +52,7 @@ pipeline {
             steps {
                 sshagent(credentials: [SSH_CREDENTIALS_ID]) {
                     sh """
-                        ssh -o StrictHostKeyChecking=no ${USERNAME}@${SERVER_IP} 'echo "Connection successful!"'
+                        ssh -o StrictHostKeyChecking=no ${USERNAME}@${SERVER_IP} 'docker run -p 3000:3000 -d matsandy/mealsapp:latest'
                     """
                 }
             }
